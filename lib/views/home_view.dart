@@ -1,10 +1,13 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:example_app/functions/button_animation_logic.dart';
 import 'package:example_app/providers/provider.dart';
 import 'package:example_app/view_models/home_view_model.dart';
 import 'package:example_app/widgets/_foundations/colors.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+
+
 
 class MyHomePage extends ConsumerStatefulWidget {
   const MyHomePage(

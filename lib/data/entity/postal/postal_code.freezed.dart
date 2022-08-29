@@ -64,36 +64,37 @@ class _$PostalCodeCopyWithImpl<$Res> implements $PostalCodeCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$PostalCodeCopyWith<$Res> implements $PostalCodeCopyWith<$Res> {
-  factory _$PostalCodeCopyWith(
-          _PostalCode value, $Res Function(_PostalCode) then) =
-      __$PostalCodeCopyWithImpl<$Res>;
+abstract class _$$_PostalCodeCopyWith<$Res>
+    implements $PostalCodeCopyWith<$Res> {
+  factory _$$_PostalCodeCopyWith(
+          _$_PostalCode value, $Res Function(_$_PostalCode) then) =
+      __$$_PostalCodeCopyWithImpl<$Res>;
   @override
   $Res call({String code, List<PostalCodeData> data});
 }
 
 /// @nodoc
-class __$PostalCodeCopyWithImpl<$Res> extends _$PostalCodeCopyWithImpl<$Res>
-    implements _$PostalCodeCopyWith<$Res> {
-  __$PostalCodeCopyWithImpl(
-      _PostalCode _value, $Res Function(_PostalCode) _then)
-      : super(_value, (v) => _then(v as _PostalCode));
+class __$$_PostalCodeCopyWithImpl<$Res> extends _$PostalCodeCopyWithImpl<$Res>
+    implements _$$_PostalCodeCopyWith<$Res> {
+  __$$_PostalCodeCopyWithImpl(
+      _$_PostalCode _value, $Res Function(_$_PostalCode) _then)
+      : super(_value, (v) => _then(v as _$_PostalCode));
 
   @override
-  _PostalCode get _value => super._value as _PostalCode;
+  _$_PostalCode get _value => super._value as _$_PostalCode;
 
   @override
   $Res call({
     Object? code = freezed,
     Object? data = freezed,
   }) {
-    return _then(_PostalCode(
+    return _then(_$_PostalCode(
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String,
       data: data == freezed
-          ? _value.data
+          ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<PostalCodeData>,
     ));
@@ -128,9 +129,9 @@ class _$_PostalCode implements _PostalCode {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PostalCode &&
+            other is _$_PostalCode &&
             const DeepCollectionEquality().equals(other.code, code) &&
-            const DeepCollectionEquality().equals(other.data, data));
+            const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @JsonKey(ignore: true)
@@ -138,12 +139,12 @@ class _$_PostalCode implements _PostalCode {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(code),
-      const DeepCollectionEquality().hash(data));
+      const DeepCollectionEquality().hash(_data));
 
   @JsonKey(ignore: true)
   @override
-  _$PostalCodeCopyWith<_PostalCode> get copyWith =>
-      __$PostalCodeCopyWithImpl<_PostalCode>(this, _$identity);
+  _$$_PostalCodeCopyWith<_$_PostalCode> get copyWith =>
+      __$$_PostalCodeCopyWithImpl<_$_PostalCode>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -160,12 +161,12 @@ abstract class _PostalCode implements PostalCode {
       _$_PostalCode.fromJson;
 
   @override
-  String get code => throw _privateConstructorUsedError;
+  String get code;
   @override
-  List<PostalCodeData> get data => throw _privateConstructorUsedError;
+  List<PostalCodeData> get data;
   @override
   @JsonKey(ignore: true)
-  _$PostalCodeCopyWith<_PostalCode> get copyWith =>
+  _$$_PostalCodeCopyWith<_$_PostalCode> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -243,11 +244,11 @@ class _$PostalCodeDataCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PostalCodeDataCopyWith<$Res>
+abstract class _$$_PostalCodeDataCopyWith<$Res>
     implements $PostalCodeDataCopyWith<$Res> {
-  factory _$PostalCodeDataCopyWith(
-          _PostalCodeData value, $Res Function(_PostalCodeData) then) =
-      __$PostalCodeDataCopyWithImpl<$Res>;
+  factory _$$_PostalCodeDataCopyWith(
+          _$_PostalCodeData value, $Res Function(_$_PostalCodeData) then) =
+      __$$_PostalCodeDataCopyWithImpl<$Res>;
   @override
   $Res call({String prefcode, PostalCodeAddress ja, PostalCodeAddress en});
 
@@ -258,15 +259,15 @@ abstract class _$PostalCodeDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PostalCodeDataCopyWithImpl<$Res>
+class __$$_PostalCodeDataCopyWithImpl<$Res>
     extends _$PostalCodeDataCopyWithImpl<$Res>
-    implements _$PostalCodeDataCopyWith<$Res> {
-  __$PostalCodeDataCopyWithImpl(
-      _PostalCodeData _value, $Res Function(_PostalCodeData) _then)
-      : super(_value, (v) => _then(v as _PostalCodeData));
+    implements _$$_PostalCodeDataCopyWith<$Res> {
+  __$$_PostalCodeDataCopyWithImpl(
+      _$_PostalCodeData _value, $Res Function(_$_PostalCodeData) _then)
+      : super(_value, (v) => _then(v as _$_PostalCodeData));
 
   @override
-  _PostalCodeData get _value => super._value as _PostalCodeData;
+  _$_PostalCodeData get _value => super._value as _$_PostalCodeData;
 
   @override
   $Res call({
@@ -274,7 +275,7 @@ class __$PostalCodeDataCopyWithImpl<$Res>
     Object? ja = freezed,
     Object? en = freezed,
   }) {
-    return _then(_PostalCodeData(
+    return _then(_$_PostalCodeData(
       prefcode: prefcode == freezed
           ? _value.prefcode
           : prefcode // ignore: cast_nullable_to_non_nullable
@@ -316,7 +317,7 @@ class _$_PostalCodeData implements _PostalCodeData {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PostalCodeData &&
+            other is _$_PostalCodeData &&
             const DeepCollectionEquality().equals(other.prefcode, prefcode) &&
             const DeepCollectionEquality().equals(other.ja, ja) &&
             const DeepCollectionEquality().equals(other.en, en));
@@ -332,8 +333,8 @@ class _$_PostalCodeData implements _PostalCodeData {
 
   @JsonKey(ignore: true)
   @override
-  _$PostalCodeDataCopyWith<_PostalCodeData> get copyWith =>
-      __$PostalCodeDataCopyWithImpl<_PostalCodeData>(this, _$identity);
+  _$$_PostalCodeDataCopyWith<_$_PostalCodeData> get copyWith =>
+      __$$_PostalCodeDataCopyWithImpl<_$_PostalCodeData>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -351,14 +352,14 @@ abstract class _PostalCodeData implements PostalCodeData {
       _$_PostalCodeData.fromJson;
 
   @override
-  String get prefcode => throw _privateConstructorUsedError;
+  String get prefcode;
   @override
-  PostalCodeAddress get ja => throw _privateConstructorUsedError;
+  PostalCodeAddress get ja;
   @override
-  PostalCodeAddress get en => throw _privateConstructorUsedError;
+  PostalCodeAddress get en;
   @override
   @JsonKey(ignore: true)
-  _$PostalCodeDataCopyWith<_PostalCodeData> get copyWith =>
+  _$$_PostalCodeDataCopyWith<_$_PostalCodeData> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -436,11 +437,11 @@ class _$PostalCodeAddressCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PostalCodeAddressCopyWith<$Res>
+abstract class _$$_PostalCodeAddressCopyWith<$Res>
     implements $PostalCodeAddressCopyWith<$Res> {
-  factory _$PostalCodeAddressCopyWith(
-          _PostalCodeAddress value, $Res Function(_PostalCodeAddress) then) =
-      __$PostalCodeAddressCopyWithImpl<$Res>;
+  factory _$$_PostalCodeAddressCopyWith(_$_PostalCodeAddress value,
+          $Res Function(_$_PostalCodeAddress) then) =
+      __$$_PostalCodeAddressCopyWithImpl<$Res>;
   @override
   $Res call(
       {String prefecture,
@@ -451,15 +452,15 @@ abstract class _$PostalCodeAddressCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PostalCodeAddressCopyWithImpl<$Res>
+class __$$_PostalCodeAddressCopyWithImpl<$Res>
     extends _$PostalCodeAddressCopyWithImpl<$Res>
-    implements _$PostalCodeAddressCopyWith<$Res> {
-  __$PostalCodeAddressCopyWithImpl(
-      _PostalCodeAddress _value, $Res Function(_PostalCodeAddress) _then)
-      : super(_value, (v) => _then(v as _PostalCodeAddress));
+    implements _$$_PostalCodeAddressCopyWith<$Res> {
+  __$$_PostalCodeAddressCopyWithImpl(
+      _$_PostalCodeAddress _value, $Res Function(_$_PostalCodeAddress) _then)
+      : super(_value, (v) => _then(v as _$_PostalCodeAddress));
 
   @override
-  _PostalCodeAddress get _value => super._value as _PostalCodeAddress;
+  _$_PostalCodeAddress get _value => super._value as _$_PostalCodeAddress;
 
   @override
   $Res call({
@@ -469,7 +470,7 @@ class __$PostalCodeAddressCopyWithImpl<$Res>
     Object? address3 = freezed,
     Object? address4 = freezed,
   }) {
-    return _then(_PostalCodeAddress(
+    return _then(_$_PostalCodeAddress(
       prefecture: prefecture == freezed
           ? _value.prefecture
           : prefecture // ignore: cast_nullable_to_non_nullable
@@ -527,7 +528,7 @@ class _$_PostalCodeAddress implements _PostalCodeAddress {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PostalCodeAddress &&
+            other is _$_PostalCodeAddress &&
             const DeepCollectionEquality()
                 .equals(other.prefecture, prefecture) &&
             const DeepCollectionEquality().equals(other.address1, address1) &&
@@ -548,8 +549,9 @@ class _$_PostalCodeAddress implements _PostalCodeAddress {
 
   @JsonKey(ignore: true)
   @override
-  _$PostalCodeAddressCopyWith<_PostalCodeAddress> get copyWith =>
-      __$PostalCodeAddressCopyWithImpl<_PostalCodeAddress>(this, _$identity);
+  _$$_PostalCodeAddressCopyWith<_$_PostalCodeAddress> get copyWith =>
+      __$$_PostalCodeAddressCopyWithImpl<_$_PostalCodeAddress>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -569,17 +571,17 @@ abstract class _PostalCodeAddress implements PostalCodeAddress {
       _$_PostalCodeAddress.fromJson;
 
   @override
-  String get prefecture => throw _privateConstructorUsedError;
+  String get prefecture;
   @override
-  String get address1 => throw _privateConstructorUsedError;
+  String get address1;
   @override
-  String get address2 => throw _privateConstructorUsedError;
+  String get address2;
   @override
-  String get address3 => throw _privateConstructorUsedError;
+  String get address3;
   @override
-  String get address4 => throw _privateConstructorUsedError;
+  String get address4;
   @override
   @JsonKey(ignore: true)
-  _$PostalCodeAddressCopyWith<_PostalCodeAddress> get copyWith =>
+  _$$_PostalCodeAddressCopyWith<_$_PostalCodeAddress> get copyWith =>
       throw _privateConstructorUsedError;
 }

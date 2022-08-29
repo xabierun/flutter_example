@@ -69,22 +69,23 @@ class _$CountDataCopyWithImpl<$Res> implements $CountDataCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$CountDataCopyWith<$Res> implements $CountDataCopyWith<$Res> {
-  factory _$CountDataCopyWith(
-          _CountData value, $Res Function(_CountData) then) =
-      __$CountDataCopyWithImpl<$Res>;
+abstract class _$$_CountDataCopyWith<$Res> implements $CountDataCopyWith<$Res> {
+  factory _$$_CountDataCopyWith(
+          _$_CountData value, $Res Function(_$_CountData) then) =
+      __$$_CountDataCopyWithImpl<$Res>;
   @override
   $Res call({int count, int countUp, int countDown});
 }
 
 /// @nodoc
-class __$CountDataCopyWithImpl<$Res> extends _$CountDataCopyWithImpl<$Res>
-    implements _$CountDataCopyWith<$Res> {
-  __$CountDataCopyWithImpl(_CountData _value, $Res Function(_CountData) _then)
-      : super(_value, (v) => _then(v as _CountData));
+class __$$_CountDataCopyWithImpl<$Res> extends _$CountDataCopyWithImpl<$Res>
+    implements _$$_CountDataCopyWith<$Res> {
+  __$$_CountDataCopyWithImpl(
+      _$_CountData _value, $Res Function(_$_CountData) _then)
+      : super(_value, (v) => _then(v as _$_CountData));
 
   @override
-  _CountData get _value => super._value as _CountData;
+  _$_CountData get _value => super._value as _$_CountData;
 
   @override
   $Res call({
@@ -92,7 +93,7 @@ class __$CountDataCopyWithImpl<$Res> extends _$CountDataCopyWithImpl<$Res>
     Object? countUp = freezed,
     Object? countDown = freezed,
   }) {
-    return _then(_CountData(
+    return _then(_$_CountData(
       count: count == freezed
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
@@ -134,7 +135,7 @@ class _$_CountData implements _CountData {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CountData &&
+            other is _$_CountData &&
             const DeepCollectionEquality().equals(other.count, count) &&
             const DeepCollectionEquality().equals(other.countUp, countUp) &&
             const DeepCollectionEquality().equals(other.countDown, countDown));
@@ -150,8 +151,8 @@ class _$_CountData implements _CountData {
 
   @JsonKey(ignore: true)
   @override
-  _$CountDataCopyWith<_CountData> get copyWith =>
-      __$CountDataCopyWithImpl<_CountData>(this, _$identity);
+  _$$_CountDataCopyWith<_$_CountData> get copyWith =>
+      __$$_CountDataCopyWithImpl<_$_CountData>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -169,13 +170,13 @@ abstract class _CountData implements CountData {
       _$_CountData.fromJson;
 
   @override
-  int get count => throw _privateConstructorUsedError;
+  int get count;
   @override
-  int get countUp => throw _privateConstructorUsedError;
+  int get countUp;
   @override
-  int get countDown => throw _privateConstructorUsedError;
+  int get countDown;
   @override
   @JsonKey(ignore: true)
-  _$CountDataCopyWith<_CountData> get copyWith =>
+  _$$_CountDataCopyWith<_$_CountData> get copyWith =>
       throw _privateConstructorUsedError;
 }
